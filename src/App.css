@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #9fc7d1;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 /* Style for main heading  */
 .heading {
@@ -29,10 +30,11 @@ button {
   border: 3px solid black;
   outline: black;
   border-radius: 30px;
-  background-color: aqua;
+  background-color: aquamarine;
 }
 button:hover{
   border: 3px solid blue;
+  background-color: aqua;
 }
 
 /* styling for function component  */
