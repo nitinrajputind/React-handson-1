@@ -1,38 +1,158 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #9fc7d1;
+}
+/* Style for main heading  */
+.heading {
   text-align: center;
+  font-size: 50px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-shadow: 5px 5px 10px rgb(32, 177, 234);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* stylng for button  */
+.btn {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+button {
+  width: 30rem;
+  height: 80px;
+  font-size: 20px;
+  border: 3px solid black;
+  outline: black;
+  border-radius: 30px;
+  background-color: aqua;
+}
+button:hover{
+  border: 3px solid blue;
 }
 
-.App-link {
-  color: #61dafb;
+/* styling for function component  */
+.main-container{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin: auto;
+  margin-top: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.functionClass{
+  max-width: 550px;
+  height: 300px;
+  text-align: center;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 30px;
+  position: absolute;
+  left: 0px;
+}
+
+
+/* styling for class component  */
+.ClassComp{
+  max-width: 550px;
+  height: 300px;
+  text-align: center;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 30px;
+  position: absolute;
+  right: 0;
+}
+
+/* Component Content style  */
+.content h1{
+  margin-bottom: 30px;
+}
+
+.red {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+/* Media Queries */
+/* mobile size  */
+
+@media screen and (max-width: 697px) {
+  .btn{
+    gap: 20px;
+    flex-direction: row;
   }
-  to {
-    transform: rotate(360deg);
+  .main-container{
+    width: 80%;
+    flex-direction: column;
+    margin-top: 90px;
+    gap: 40px;
   }
+  .functionClass{
+    position: relative;
+    top: 0;
+  }
+  .ClassComp{
+    position: absolute;
+    top: 350px;
+  }
+}
+
+
+/* tablet size  */
+@media screen and (min-width: 698px) and (max-width: 992px) {
+  .btn {
+    gap: 30px;
+  }
+  button{
+    width: 20rem;
+  }
+  .main-container{
+    width: 100vw;
+    height: 70vh;
+    flex-direction: column;
+    margin-top: 0px;
+    gap: 20px;
+  }
+  .functionClass{
+    width: 90vw;
+    position: relative;
+    left: inherit;
+  }
+  .fixed1{
+    position: absolute;
+    top: 80px;
+  }
+  .ClassComp{
+    width: 80vw;
+    position: relative;
+    right: inherit;
+  }
+  .fixed{
+    position: absolute;
+    top: 430px;
+  }
+}
+/* big screen  */
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+  button{
+    width: 25rem;
+  }
+  .functionClass{
+    max-width: 400px;
+  }
+  .ClassComp{
+    max-width: 400px;
+  }
+  
 }
